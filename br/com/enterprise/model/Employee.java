@@ -22,11 +22,6 @@ public abstract class Employee {
         return salary;
     }
 
-    // Set salary
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
     // Method for increase salary
     public void receiveIncrease(double percentage) {
         if (percentage <= 0){
@@ -34,7 +29,7 @@ public abstract class Employee {
         } else if (percentage > 1){
             throw new InvalidValuePercentageException("Invalid percentage. The percentage is too high.");
         }
-        salary *= 1 + (percentage / 100);
+        salary += salary * (percentage / 100);
     }
 
     // Abstract method for calculating annual employee bonuses
