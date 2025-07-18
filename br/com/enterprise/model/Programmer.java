@@ -11,6 +11,7 @@ public class Programmer extends Employee {
     }
 
     // Method for calculating annual employee bonuses
+    @Override
     public double calculateAnnualBonuses() {
         return super.getSalary() * (1 + bonuses);
     }
